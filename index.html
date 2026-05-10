@@ -1,27 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Equipment - Fitness Store</title>
+    <title>EVO - Performance Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Pro Training Gear</h1>
 
-    <p>Upgrade your home  with our gym top-quality equipment.</p>
+<!-- 🛒 CART -->
+<a href="cart.html" class="cart-button">
+    Cart 🛒 <span id="cart-count">0</span>
+</a>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="pages/apparel.html">Apparel</a>
+    <a href="pages/supplements.html">Supplements</a>
+    <a href="pages/equipment.html">Equipment</a>
+</nav>
+
+<!-- HERO -->
+<h1 style="text-align:center; margin-top:30px;">EVO PERFORMANCE</h1>
+<p style="text-align:center; color:#aaa;">
+    Train. Evolve. Dominate.
+</p>
+
+<!-- CATEGORY SECTION -->
+<h2 class="section-title">Shop Categories</h2>
+
+<div class="category-grid">
+
+    <div class="category-card">
+        <h3>Clothes</h3>
+        <p>Men & Women performance apparel</p>
+        <a href="pages/clothes.html" class="btn">Shop Now</a>
+    </div>
+
+    <div class="category-card">
+        <h3>Supplements</h3>
+        <p>Fuel your performance</p>
+        <a href="pages/supplements.html" class="btn">Shop Now</a>
+    </div>
+
+    <div class="category-card">
+        <h3>Equipment</h3>
+        <p>Elite training tools</p>
+        <a href="pages/equipment.html" class="btn">Shop Now</a>
+    </div>
+
+</div>
+
+<!-- VIDEO -->
+<h2 class="section-title">Training System</h2>
+
+<div style="width:90%; margin:auto;">
+    <iframe width="100%" height="400"
+        src="https://www.youtube.com/embed/ml6cT4AZdqI"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+<hr style="border-color: #333;">
+
+    <h3>Expert Training Guide</h3>
+
+    <div class="slideshow-container">
+        <img class="slides" src="evo1.jpg" alt="EVO Fire Strength">
+        <img class="slides" src="evo2.jpg" alt="EVO Neural Strength">
+        <img class="slides" src="evo3.jpg" alt="EVO Logo Neon">
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+
+            // Safety check: If no images are found, don't run the script
+            if (slides.length === 0) return;
+
+            // Hide all images
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            // Reset back to the first image if we reach the end
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Show the current image
+            slides[slideIndex - 1].style.display = "block";
+
+            // Change image every 3 seconds
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+
+    <p class="tagline">Strength isn't born. It's Evolved.</p>
 
     <p>
-        - Clothes<br>
-        - Supplements<br>
-        - Equipment
+        Welcome to the next generation of human performance.<br>
+        Select a pathway above to begin your evolution.
     </p>
 
-    <p>
-        <a href="../index.html">Back to Home</a>
-    </p>
+<script src="cart.js"></script>
 
-    <p>
-        <a href="supplements.html">View supplements</a>
-    </p>
 </body>
 </html>
